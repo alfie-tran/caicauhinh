@@ -1,6 +1,7 @@
 import express from "express";
 import configViewEngine from "./configs/viewEngine";
 import initWebRoute from './route/web';
+import initAPIRoute from "./route/API";
 // import connection from "./configs/connectDB";
 
 const app = express();
@@ -18,8 +19,8 @@ configViewEngine(app);
 //init Web Route
 initWebRoute(app);
 
-
-
+//init API route
+initAPIRoute(app);
 
 app.listen(port, () => {    
   console.log(`Example app listening on http://localhost: ${port}`)
